@@ -1,0 +1,35 @@
+Finding Sequence Lengths in a FASTA Dataset - Flowchart
+
+Start
+|
+|--> Initialize Dictionary (sequence_lengths)
+|
+|--> Open File
+|
+|--> Initialize current_sequence and sequence_length variables
+|
+|--> Read Line
+|     |
+|     |--> More lines in the file? (Yes/No)
+|     |     |
+|     |     |--> Line starts with '>'? (Yes/No)
+|     |     |     |
+|     |     |     |--> Parse sequence name from line
+|     |     |     |
+|     |     |     |--> Reset sequence_length to 0
+|     |     |     |
+|     |     |     |--> Calculate length of the sequence line
+|     |     |     |
+|     |     |     |--> Add length to sequence_length
+|     |     |     |
+|     |     |     |--> Next line starts with '>'? (Yes/No)
+|     |     |          |
+|     |     |          |--> Add entry to sequence_lengths dictionary
+|     |     |
+|     |     |--> More lines in the file? (Yes/No)
+|     |
+|     |--> Print results in the desired format (e.g., 'sequence_name sequence_length')
+|
+|--> Close File
+|
+End
